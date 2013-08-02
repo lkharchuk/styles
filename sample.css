@@ -1,0 +1,207 @@
+/*general              */
+html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #EDEDED;
+    font-family: Verdana,regular;
+    color: #606060;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+h2,h4,ul{
+    padding: 10px 0px;
+    margin: 0;
+}
+
+a{
+   text-decoration: none ;
+    color: #ABCC47;
+}
+
+/*header              */
+#header {
+    background: none repeat scroll 0 0 #353B41;
+    padding: 10px;
+    height: 100px;
+}
+
+#header h1{
+    height: 100px;
+    width: 170px;
+    position: relative;
+    margin: 0px;
+    background: url("http://www.greentube.com//imgs/top.jpg") repeat scroll 0 0 transparent;
+    float:left;
+}
+
+#header h1 a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    -left  :-100%;  /*ie6 fix*/
+}
+
+#header p{
+    color: #EDEDED;
+    font-size: 22px;
+    font-style: italic;
+    text-align:center;
+}
+
+/*top navigation*/
+#nav {
+    background: none repeat scroll 0 0 white;
+    border-bottom: 1px solid #A9BCCE;
+    overflow: hidden;
+    padding-left:10px;
+    height: 28px;
+}
+
+#nav ul {
+    font-size: 18px;
+    font-weight: normal;
+    list-style-type: none;
+    padding: 0 10px 28px;
+    white-space: nowrap;
+}
+
+#nav ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#nav ul li a {
+    color: #333333;
+    display: inline-block;
+    letter-spacing: 0;
+    padding: 0 4px 5px;
+    margin-right: 12px;
+    position: relative;
+}
+
+.links #btnLinks a,
+.contact #btnContact a,
+.about #btnAbout a,
+.home #btnHome a,
+#nav ul li a:hover {
+    color: #ABCC47;
+}
+
+
+/*main sections content,sideboar, footer*/
+#wrapper{
+    height: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main{
+    bottom: 0;
+    clear: both;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 149px;
+    width: 100%;
+}
+
+#content:before{
+    content:'.';
+    visibility: hidden;
+}
+
+#content{
+    float: left;
+    text-align: justify;
+    width:auto;
+    padding-left: 10px;
+    padding-right: 245px;
+}
+
+#content a{
+    padding-right:5px;
+}
+.links a:hover:after,
+#content a:hover:after{
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #ABCC47;
+    border-top: 4px solid transparent;
+    content: "";
+    height: 0;
+    margin-left: 2px;
+    margin-top: 8px;
+    position: absolute;
+}
+
+#sidebar{
+    float: left;
+    width: 225px;
+    position: relative;
+    margin-left: -225px;
+    top:0px;
+}
+
+#footer{
+    background-color: #353B41;
+    clear: both;
+    color: #EDEDED;
+    overflow: hidden;
+    text-align: right;
+    width: 100%;
+}
+#footer *{
+    padding-right: 10px;
+}
+#footer a{
+    color: #EDEDED;
+    text-decoration: underline;
+}
+
+/*sub sections links, flickr*/
+.flickr{
+    width: 225px;
+}
+.flickr div{
+    float: left;
+}
+.flickr img{
+    border: 0;
+    display: block;
+}
+.links{
+    clear: left;
+    overflow: hidden;
+}
+.links ul{
+    list-style-type: none;
+}
+
+
+
+/*IE6 hack fix ;-)*/
+#content a i,.links a i{visibility:hidden;position:absolute;margin-top: -5px;margin-left:-1px;}
+#content a:hover,.links a:hover {*zoom: expression( this.runtimeStyle.zoom="1", this.appendChild( document.createElement("i")).className="ie-after" );}
+#content a:hover .ie-after,.links a:hover .ie-after{*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&gt;');}
+#content a:hover i,.links a:hover i{visibility:visible;}
+
+
+
